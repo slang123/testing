@@ -6,4 +6,4 @@ RUN npm install
 RUN npm run build
 # Stage 2
 FROM nginx:alpine
-COPY --from=node /dist/testing /usr/share/nginx/html
+COPY --from=node app/dist/testing /usr/share/nginx/html
